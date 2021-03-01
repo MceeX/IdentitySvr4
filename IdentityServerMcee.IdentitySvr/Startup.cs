@@ -19,13 +19,17 @@ namespace IdentityServerMcee.IdentitySvr
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services)
     {
-      var clients = _configuration.GetSection("IdentityServer:Clients");
+      services.AddMvc();
+      //var clients = _configuration.GetSection("IdentityServer:Clients");
       services.AddIdentityServer()
               .AddDeveloperSigningCredential()
-              .AddInMemoryApiScopes(_configuration.GetSection("apiScopes"))
+              //.AddInMemoryApiScopes(_configuration.GetSection("apiScopes"))
               .AddInMemoryApiResources(Config.GetAllApiResources())
               //.AddInMemoryClients(_configuration.GetSection("IdentityServer:Clients"));
-              .AddInMemoryClients(Config.GetClients());
+              .AddInMemoryClients(Config.GetClients())
+              .AddInMemoryApiScopes(Config.GetApiScopes())
+              .AddTestUsers(Config.GetUsers());
+              
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +41,8 @@ namespace IdentityServerMcee.IdentitySvr
       }
 
       app.UseIdentityServer();
+
+      app.UseStaticFiles();
     }
   }
 }
