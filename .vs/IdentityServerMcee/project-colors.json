@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3b755b42-42ad-4524-b316-2d47844853e2": {
+      "ProjectGuid": "3b755b42-42ad-4524-b316-2d47844853e2",
+      "DisplayName": "IdentityServerMcee.IdentitySvr",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

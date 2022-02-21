@@ -14,12 +14,18 @@ namespace IdentityServerMcee.IdentitySvr
         new TestUser
         {
           SubjectId = "1",
+          Username = "sindile@gmail.com",
+          Password = "sindile"
+        },
+        new TestUser
+        {
+          SubjectId = "2",
           Username = "Sinken",
           Password = "password"
         },
         new TestUser
         {
-          SubjectId = "2",
+          SubjectId = "3",
           Username = "Mcee",
           Password = "getgoals"
         }
@@ -40,11 +46,42 @@ namespace IdentityServerMcee.IdentitySvr
         new ApiResource("BankOMceeAPI","Customer API for BankOAPI")
       };
     }
+    public static IEnumerable<IdentityResource> GetIdentityResources()
+    {
+      return new List<IdentityResource>
+    {
+        new IdentityResources.OpenId(),
+        new IdentityResources.Profile(),
+    };
+    }
 
     public static IEnumerable<Client> GetClients()
     {
       return new List<Client>
       {
+
+        new Client
+        {
+          ClientId = "adminapi",
+          AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+          ClientSecrets =
+          {
+            new Secret("secret".Sha256())
+          },
+          AllowedScopes = {"offline_access"},
+        },
+        new Client
+        {
+          ClientId = "adminUIclient",
+          AllowedGrantTypes = GrantTypes.Implicit,
+          RedirectUris = new [] { "https://localhost:7021", "https://localhost:7021/signin-oidc" },
+          ClientSecrets =
+          {
+            new Secret("secret".Sha256())
+          },
+           AllowedScopes = new List<string>{IdentityServerConstants.StandardScopes.OpenId,IdentityServerConstants.StandardScopes.Profile},
+           AllowAccessTokensViaBrowser = true
+        },
         new Client
         {
           ClientId = "client",
@@ -53,7 +90,7 @@ namespace IdentityServerMcee.IdentitySvr
           {
             new Secret("secret".Sha256())
           },
-          AllowedScopes = { "bankOMceeAPI", "offline_access"},
+          AllowedScopes = {"offline_access"},
         },
         //Resource owner password grant type
         new Client

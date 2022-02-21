@@ -28,7 +28,8 @@ namespace IdentityServerMcee.IdentitySvr
               //.AddInMemoryClients(_configuration.GetSection("IdentityServer:Clients"));
               .AddInMemoryClients(Config.GetClients())
               .AddInMemoryApiScopes(Config.GetApiScopes())
-              .AddTestUsers(Config.GetUsers());
+              .AddTestUsers(Config.GetUsers())
+              .AddInMemoryIdentityResources(Config.GetIdentityResources());
               
     }
 
@@ -39,10 +40,16 @@ namespace IdentityServerMcee.IdentitySvr
       {
         app.UseDeveloperExceptionPage();
       }
-
-      app.UseIdentityServer();
-
       app.UseStaticFiles();
+      app.UseRouting();
+      app.UseIdentityServer();
+      app.UseAuthentication();
+      app.UseHttpsRedirection();
+      app.UseAuthorization();
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapDefaultControllerRoute();
+      });
     }
   }
 }

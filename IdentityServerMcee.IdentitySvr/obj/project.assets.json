@@ -396,7 +396,7 @@
       ]
     },
     "System.Security.Cryptography.Cng/4.5.0": {
-      "sha512": "WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
+      "sha512": "O4tqXxWCD8y1IU1VTgzbuBFwoRahrADhDUxHjwezhHCsqyFNyQ5EytjWBxu0EsZuH14b4UO2pFkG063K2h/9Ug==",
       "type": "package",
       "path": "system.security.cryptography.cng/4.5.0",
       "files": [
@@ -486,27 +486,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\smathibane\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\IdentityServerMcee\\IdentityServerMcee.IdentitySvr\\IdentityServerMcee.IdentitySvr.csproj",
+      "projectUniqueName": "C:\\ProjX\\SP-Submission\\Sindile.IDServer\\IdentityServerMcee.IdentitySvr\\IdentityServerMcee.IdentitySvr.csproj",
       "projectName": "IdentityServerMcee.IdentitySvr",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\IdentityServerMcee\\IdentityServerMcee.IdentitySvr\\IdentityServerMcee.IdentitySvr.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\IdentityServerMcee\\IdentityServerMcee.IdentitySvr\\obj\\",
+      "projectPath": "C:\\ProjX\\SP-Submission\\Sindile.IDServer\\IdentityServerMcee.IdentitySvr\\IdentityServerMcee.IdentitySvr.csproj",
+      "packagesPath": "C:\\Users\\smathibane\\.nuget\\packages\\",
+      "outputPath": "C:\\ProjX\\SP-Submission\\Sindile.IDServer\\IdentityServerMcee.IdentitySvr\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\smathibane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -554,7 +551,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
